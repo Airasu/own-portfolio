@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aira</title>
+    <link rel="stylesheet" href="{% static "/css/style.css" %}">
+</head>
+<body>
+    <div class="background-image-container">
+        <img src="{% static '/images/bg.gif' %}" alt="Background Image" class="background-image">
+    </div>
+    <main>
+        <header>
+            <div class="navigations">
+                <a href="{% url "home" %}">Home</a>
+                <a href="{% url "about" %}">About</a>
+                <a href="{% url "projects" %}">Projects</a>
+                <a href="{% url "contact" %}">Contact</a>
+            </div>
+            <div class="labels">
+                <label class="name">Princess Aira A. Suranol</label>
+                <label class="date">2024</label>
+            </div>
+        </header>
+        <div class="content">
+            {% block content %}
+            {% endblock content %}
+        </div>
+        <footer>
+            Suwanol
+        </footer>
+    </main>
+</body>
+</html>
